@@ -1,0 +1,20 @@
+- Methods with the same signature can be overriden. This is also called dynamic polymorphism
+
+- Same method in child class and same method in parent class,
+ with the same number or same type of parameters is called method overriding
+
+ - If the method in the parent is made into static, and the child class has the @Override keyword before the method
+ This will cause error as static methods cannot be overriden
+
+ - If the method has the same signature, that is if both child and parent have static. It is called method hiding
+ - Method hiding is a concept hat occurs when a subclass defines a static method with the same name and method signature as a static method in its superclass.
+ - In this situation, the subclass's static method "hides" the static method of the superclass rather than overriding it.
+
+- Static Method can be overloaded. But static method cannot be overriden
+- Method overloading is a feature in Java (and many other programming languages)
+that allows you to define multiple methods in the same class with the same name but different parameter lists.
+
+- Main method can be overloaded as well
+
+
+
