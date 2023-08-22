@@ -1,31 +1,64 @@
 package com.Problems;
 
+import java.util.Scanner;
+
 public class ReverseString {
 
     public static void main(String[] args) {
 
-    // Reverse a String?
-    // Difference between String and String Buffer?
-    // Do we have a reverse function in String?
+        // TOPICS:
+        // Reverse a String?
+        // Difference between String and String Buffer/String Builder? String Builder is used here.
+        // Do we have a reverse function in String?
 
-        String s = "Selenium";
+        // Initialize a Scanner to read user input
+        Scanner scanner = new Scanner(System.in);
 
-      /*  // 1. Using charAt() and for loop
-        int length = s.length();
-        String reverse = "";
-        for(int i = length - 1; i>=0; i--){
-           reverse = reverse + s.charAt(i);
-           // The loop will start from muineleS. The reason for appending is because reverse is blank
-            // Do not print inside the for loop as it will print every iteration of the loop
-        }
-        System.out.println(reverse);*/
+        // Prompt the user to enter a string
+        System.out.print("Enter a string: ");
+        String input = scanner.nextLine();
 
-        // 2. Using StringBuffer class
-        StringBuffer sf = new StringBuffer(s); // String Buffer is mutable and can be changed unlike String
-        System.out.println(sf.reverse());
+        // Reverse the input string using the custom method and print the result
+        String reversed = reverseString(input);
+        System.out.println("Reversed string: " + reversed);
 
+        // Reverse the input string using StringBuilder and print the result
+        String reverseStringBuilder = reverseStringBuilder(input);
+        System.out.println("Reversed stringBuilder: " + reverseStringBuilder);
 
-/*        s.reverse cannot be used as the String 's' is immutable and cannot be changed
-        System.out.println(s.reverse);*/
+        // Close the scanner to release resources
+        scanner.close();
+
     }
+
+    // 1. Reverse a string using a custom method
+    public static String reverseString(String str) {
+        int length = str.length();
+        String reversed = " ";
+
+        // Iterate through the characters of the string in reverse order
+        for (int i = length - 1; i >= 0; i--) {
+            // Append each character to the reversed StringBuilder
+            reversed+=(str.charAt(i));
+        }
+
+        // Convert the reversed StringBuilder back to a string
+        return reversed;
+    }
+
+    // 2. Reverse a string using the StringBuffer class
+    public static String reverseStringBuilder(String s) {
+        // String Builder is mutable and can be changed unlike String
+        // Create a StringBuilder instance with the input string
+        StringBuilder stringBuilder = new StringBuilder(s);
+
+        // Use the reverse() method of StringBuilder to reverse the content
+        stringBuilder.reverse();
+
+        // Convert the reversed StringBuilder back to a string
+        return stringBuilder.toString();
+    }
+
+
+
 }
