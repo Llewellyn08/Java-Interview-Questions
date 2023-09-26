@@ -34,6 +34,7 @@ public class ReverseString {
     // 1. Reverse a string using a custom method
     public static String reverseString(String str) {
         int length = str.length();
+        System.out.println(length);
         String reversed = " ";
 
         // Iterate through the characters of the string in reverse order
@@ -42,7 +43,7 @@ public class ReverseString {
             reversed+=(str.charAt(i));
         }
 
-        // Convert the reversed StringBuilder back to a string
+        // Return Reversed String
         return reversed;
     }
 

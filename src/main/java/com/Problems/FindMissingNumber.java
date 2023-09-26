@@ -1,26 +1,49 @@
 package com.Problems;
 
+import java.util.Scanner;
+
 public class FindMissingNumber {
     public static void main(String[] args) {
-        int a[] = {1,2,3,4,6};
+        // Create a Scanner object to read user input
+        Scanner scanner = new Scanner(System.in);
 
-        // Get the sum of the elements in the array
-        int sum = 0;
-        for(int i =0;i <a.length; i++){
-            sum = sum + a[i];
+        // Prompt the user to enter the number of elements in the array
+        System.out.print("Enter the number of elements in the array: ");
+        int n = scanner.nextInt();
+
+        // Create an array to store the user input
+        int[] a = new int[n];
+
+        // Prompt the user to enter the elements of the array
+        System.out.print("Enter the elements of the array: ");
+        for (int i = 0; i < n; i++) {
+            a[i] = scanner.nextInt();
         }
-        System.out.println(sum);
 
-        // Get the sum of the sequence getting by starting from 1 till the end of the sequence
-        // Here we will get the sum with the missing number
-        int sum1 = 0;
-        for(int j=1; j<=6; j++){
-            sum1 =sum1 + j;
+        // Close the scanner to release resources
+        scanner.close();
+
+        //Find the last element of the array
+        int lastElement = 0;
+        for(int num : a){
+            lastElement = num;
         }
-        System.out.println(sum1);
 
-        // Minus sum1 with sum, this will give the missing number
-        System.out.println("Missing number is: " + (sum1-sum));
+        // Calculate the sum of the elements in the array
+        int actualSum = 0;
+        for (int num : a) {
+            actualSum += num;
+        }
+        System.out.println("Sum of actual array: " + actualSum);
 
+        // Calculate the expected sum of the sequence from 1 to n+1
+        int expectedSum = 0;
+        for (int j = a[0]; j <= lastElement; j++) {
+            expectedSum += j;
+        }
+        System.out.println("Expected sum of array: " + expectedSum);
+
+        // Calculate the missing number in the array by finding the difference between expectedSum and actualSum
+        System.out.println("Missing number in the array is " + (expectedSum - actualSum));
     }
 }
