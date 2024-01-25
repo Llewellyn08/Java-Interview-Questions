@@ -75,3 +75,34 @@ How to initialize an object:
 	1. ![[Pasted image 20240125033835.png]]
 2. Using method
 	1. ![[Pasted image 20240125034027.png]]
+
+### Constructors
+- It is used to initialize an object
+- Is a block(similiar to method) having same name as that of class name
+- Does not have any return type - not even void
+- The only modifier applicable to modifier
+	- public
+	- protected
+	- private
+	- default
+- It executes automatically when we create an object
+	- 2 Ways to call constructor
+		- Test t = new Test();
+		- new Test(); (no need to create reference in this case t)
+- Note: Constructor doesn't create object, Object is created by new keyword
+
+Types in Constructors
+1. Default Constructor - No arg constructor
+	1. Compiler creates default constructor
+	2. If there is no constructor created, the compiler creates one by default
+	3. If the user creates even one constructor the compiler will not create a default constructor
+2. User Defined Constructor - No arg constructor
+	1. User creates this constructor with no arguments
+3. Parametrized Constructor
+	1. User created this constructor with arguments
+		1. Test(String name){}
+		2. If an argument is give the user has to pass the variable that was provided when as in argument when creating the constructo
+
+Why doesn't constructor have a return type
+1. Constructor's main job is to initialize an object. 
+2. When compiler creates a default constructor, it cannot judge what return type to add
