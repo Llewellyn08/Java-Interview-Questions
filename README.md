@@ -75,7 +75,7 @@ How to initialize an object:
 	1. ![[Pasted image 20240125033835.png]]
 2. Using method
 	1. ![[Pasted image 20240125034027.png]]
-
+---
 ### Constructors
 - It is used to initialize an object
 - Is a block(similiar to method) having same name as that of class name
