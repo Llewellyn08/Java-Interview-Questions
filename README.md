@@ -72,9 +72,9 @@ Syntax: pluto.run();
 
 How to initialize an object:
 1. Using reference variable
-	1. ![[Pasted image 20240125033835.png]]
+	1. ![Pasted image 20240125033835](https://github.com/Llewellyn08/Java-Interview-Questions/assets/87804252/37ff4f34-f0d6-4f8a-98c6-fc48c4d4404b)
 2. Using method
-	1. ![[Pasted image 20240125034027.png]]
+	1. ![Pasted image 20240125034027](https://github.com/Llewellyn08/Java-Interview-Questions/assets/87804252/b916332e-93e0-418b-b564-7f829a0b974c)
 ---
 ### Constructors
 - It is used to initialize an object
@@ -106,3 +106,36 @@ Types in Constructors
 Why doesn't constructor have a return type
 1. Constructor's main job is to initialize an object. 
 2. When compiler creates a default constructor, it cannot judge what return type to add
+---
+Types of Relationship between Classes
+1. Inheritance
+	1. IS-A Relationship
+2. Association
+	1. HAS-A Relationship
+		1. Aggregation
+		2. Composition
+
+#### Advantages of Building Relationship between classes
+1. Code Reusability
+2. Cost Cutting
+3. Reduce Redundancy
+
+#### Inheritance (IS-A)
+- Using extends keyword we can create relationship between two or more classes
+- Classes are tightly coupled with Inheritance which is a disadvantage
+
+#### Association (HAS-A)
+- Very commonly used relationship
+- Can be created by defining variables
+- Can be created by using **new** keyword
+- Classes are not tightly coupled together which is an advantage as compared to Inheritance
+##### Aggregation
+- Weak Bonding
+- ![Pasted image 20240130214730](https://github.com/Llewellyn08/Java-Interview-Questions/assets/87804252/ec4a8d45-b5c9-4a2b-8e8f-b3e2bed03666)
+
+##### Composition
+- Strong Bonding
+- ![Pasted image 20240130222418](https://github.com/Llewellyn08/Java-Interview-Questions/assets/87804252/23ae6c13-8092-439e-898f-88523a55509c)
+
+
+
